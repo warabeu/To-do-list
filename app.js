@@ -1,11 +1,6 @@
 function myFunction(x) {
     x.classList.toggle("change");
   }
-
-
-
-
-
 const submitButton = document.getElementById("btnSubmit");
 const tasks = document.getElementById("tasks");
 const messageElement = document.getElementById("message");
@@ -20,15 +15,13 @@ const greetinMessage = ("Good you have no tasks today!");
 displayMessage(greetinMessage);
 
 
-
 function myFunction() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {
       x.className += " responsive";
     } else {
       x.className = "navbar";
-    }
-    
+    } 
   }
  
 
@@ -37,8 +30,7 @@ function clearList(){
     while (taskList.length > 0){
         taskList[0].parentNode.removeChild(taskList[0]);
     }
-    displayMessage(greetinMessage);
-    
+    displayMessage(greetinMessage);  
 }
 
 function handleTaskClick(event){
@@ -51,7 +43,6 @@ function handleTaskClick(event){
     }
 }
 
-
 function addTask(){
     const newTask = document.getElementById("newTask");
     if (inputIsValid(newTask.value)){
@@ -62,7 +53,6 @@ function addTask(){
     }else{
         displayMessage("Please provide non empty input!")
     }
-
 }
 
 function displayMessage(message){
